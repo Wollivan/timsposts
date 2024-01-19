@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-function App() {
+
+export default function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -14,5 +15,3 @@ function App() {
 
   return <div>{message}</div>;
 }
-
-export default App;
