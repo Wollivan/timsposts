@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_URL } from "../config";
 
 export default function App() {
   const [message, setMessage] = useState("");
@@ -8,9 +9,7 @@ export default function App() {
   }, []);
 
   async function getMessage() {
-    const response = await fetch(
-      "https://timsposts-server.onrender.com/message"
-    );
+    const response = await fetch(API_URL);
     const data = await response.json();
     setMessage(data);
   }
