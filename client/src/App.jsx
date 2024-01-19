@@ -8,7 +8,9 @@ export default function App() {
   }, []);
 
   async function getMessage() {
-    const response = await fetch("http://localhost:8080/message");
+    const response = await fetch(
+      "https://timsposts-server.onrender.com/message"
+    );
     const data = await response.json();
     setMessage(data);
   }
